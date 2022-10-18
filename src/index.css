@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #f4f4f4d1;
+  font-size: 2rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.title{
+  height: 50px;
+  padding: 0 0 0 35px;
+  display: flex;
+  align-items: center;
+}
+.title>h1{
+  margin: 0;
+  filter:drop-shadow(1px 2px 5px black)
+}
+.image>img{
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+}
+.font{
+  text-align: center;
+  position: relative;
+  font-size:25em;
+  overflow: hidden;
+  font-weight: 900;
+  color: #f4f4f41c;
+}
+.inside{
+  display: flex;
+  align-items: center;
+  width: 120vw;
+  position: relative;
+  overflow: hidden;
+  left: -200px;
+  height: calc(80vh - 0);
+
+}
+.presentation-text{
+  width:calc(100vw - 24px);
+  height:calc(100vh - 150px) ;
+
+  font-size: 0.6em;
+  font-weight: 300;
+  
+  position: absolute;
+justify-content: center;
+display: flex;
+align-items: center;;
+
+}
+.inside-presentation-text{
+
+}
