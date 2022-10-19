@@ -16,7 +16,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
-import Menu from "./Menu"
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
     top: false,
@@ -40,15 +39,16 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-    
       <List className="drawer-list">
         {["Home.", "About.", "Skills."].map((text, index) => (
-          <ListItem className="text-list" key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon></ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
+          <a href={text}>
+            <ListItem className="text-list" key={text} disablePadding>
+              <ListItemButton>
+                <ListItemIcon></ListItemIcon>
+                <ListItemText primary={text} />
+              </ListItemButton>
+            </ListItem>
+          </a>
         ))}
       </List>
       <Divider />
@@ -57,6 +57,7 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
+      
       {["bottom"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Toolbar
