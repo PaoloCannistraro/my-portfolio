@@ -13,6 +13,7 @@ import Navbar from "./Navbar"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import AboutMe from "./Pages/AboutMe";
 import CenterPage from "./CenterPage";
+import Skills from "./Pages/Skills";
 
 
 
@@ -34,6 +35,7 @@ function LandingPage() {
             <Routes>
               <Route path="Home." element={<CenterPage />} />
               <Route path="/About." element={<AboutMe />} />
+              <Route path="/Skills." element={<Skills/>} />
             </Routes>
           </Router>
 
