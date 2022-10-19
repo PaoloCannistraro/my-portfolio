@@ -41,7 +41,7 @@ export default function TemporaryDrawer() {
     >
       <List className="drawer-list">
         {["Home.", "About.", "Skills."].map((text, index) => (
-          <a href={text}>
+          <a key={index} href={text}>
             <ListItem className="text-list" key={text} disablePadding>
               <ListItemButton>
                 <ListItemIcon></ListItemIcon>
@@ -57,7 +57,6 @@ export default function TemporaryDrawer() {
 
   return (
     <div>
-      
       {["bottom"].map((anchor) => (
         <React.Fragment key={anchor}>
           <Toolbar
@@ -79,23 +78,14 @@ export default function TemporaryDrawer() {
               />
             </div>
             <IconButton
-              onClick={toggleDrawer(anchor, true)}
               size="large"
               edge="start"
               color="inherit"
               aria-label="menu"
-              anchor={anchor}
-              open={state[anchor]}
               sx={{ mr: 0 }}
+              onClick={toggleDrawer(anchor, true)}
             >
-              <MenuIcon
-                className="menu-icon"
-                onClick={toggleDrawer(anchor, true)}
-                style={{ fontSize: "2em" }}
-                anchor={anchor}
-                open={state[anchor]}
-                onClose={toggleDrawer(anchor, false)}
-              />
+              <MenuIcon className="menu-icon" style={{ fontSize: "2em" }} />
             </IconButton>
           </Toolbar>
 

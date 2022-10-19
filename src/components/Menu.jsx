@@ -30,7 +30,7 @@ function LandingPage() {
           }}
         >
           <Navbar />
-          <TemporaryDrawer></TemporaryDrawer>
+          <TemporaryDrawer/>
           <Router>
             <Routes>
               <Route path="Home." element={<CenterPage />} />
