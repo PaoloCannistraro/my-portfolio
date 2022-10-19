@@ -1,12 +1,11 @@
 import React from "react";
-import LandingPage from "./components/LandingPage";
-
+import LandingPage from "./components/Menu";
+import Menu from "./components/Menu";
 
 function App() {
   return (
     <div className="App">
-      <LandingPage/>
- 
+      <LandingPage />
     </div>
   );
 }

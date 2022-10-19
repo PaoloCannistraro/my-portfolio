@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700;900&display=swap");
 body {
+  overflow: hidden; /* Hide scrollbars */
   margin: 0;
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,8 +15,7 @@ code {
     monospace;
 }
 .title {
-  height: 50px;
-  padding: 0 0 0 35px;
+  padding: 0 0 0 30px;
   display: flex;
   align-items: center;
 }
@@ -23,10 +23,16 @@ code {
   margin: 0;
   filter: drop-shadow(1px 2px 5px black);
 }
+.image{
+  text-align: center;
+}
 .image > img {
-  width: 400px;
-  height: 500px;
+  margin-top: 35px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 100%;
+  opacity: 80%;
 }
 .font {
   text-align: center;
@@ -36,7 +42,7 @@ code {
   font-size: 70vw;
   height: calc(100vh - 100px);
   overflow: hidden;
-  width: calc(100vw - 48px);
+  width: calc(100vw - 34px);
   font-weight: 900;
   color: #f4f4f40a;
 }
@@ -74,6 +80,12 @@ code {
 
   text-align: center;
 }
+.drawer-layout {
+  justify-content: space-between;
+  display: flex;
+  color: white;
+  margin: 0 24px;
+}
 .icons {
   display: flex;
   flex-direction: row;
@@ -81,25 +93,34 @@ code {
   position: absolute;
   right: 10px;
 }
+.icons-in-touch {
+  display: flex;
+  flex-direction: row;
+
+
+ 
+}
 .drawer-list {
   height: 80vh;
   color: #f4f4f4d1;
 }
 .drawer {
+  display: flex;
   color: #f4f4f4d1;
 }
 .MuiTypography-root {
-  font-size: 1.5em !important;
+  font-size: 1.6em !important;
+  font-weight: 900 !important;
   text-align: end !important;
 }
 .css-9emuhu-MuiPaper-root-MuiDrawer-paper {
   background-color: rgba(33, 2, 51, 0.841) !important;
-  
 }
 .menu-icon:hover,
 .instagram-icon:hover,
 .gitHub-icon:hover,
-.linkedIn-icon:hover,.MuiTypography-root:hover {
+.linkedIn-icon:hover,
+.MuiTypography-root:hover {
   color: #ff9500e9;
 }
 .my-name {
@@ -108,11 +129,23 @@ code {
   font-size: 1.2em;
   letter-spacing: 2px;
 }
-
-@media screen and (min-width: 768px) {
- .inside-presentation-text > p {
-  font-size: 5rem;
-  font-weight: 800;
-  margin: 50px 0 0 0;
+.column-left {
+  background-color: rgba(15, 11, 0, 0);
 }
+
+.in-touch{
+
+  font-size: 0.6em;
+
+}
+.stay{
+  font-weight: 800;
+  font-size: 2em;
+}
+@media screen and (min-width: 768px) {
+  .inside-presentation-text > p {
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 50px 0 0 0;
+  }
 }
