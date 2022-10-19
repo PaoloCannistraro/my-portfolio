@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700;900&display=swap");
 body {
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #f4f4f4d1;
@@ -10,55 +10,109 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.title{
+.title {
   height: 50px;
   padding: 0 0 0 35px;
   display: flex;
   align-items: center;
 }
-.title>h1{
+.title > h1 {
   margin: 0;
-  filter:drop-shadow(1px 2px 5px black)
+  filter: drop-shadow(1px 2px 5px black);
 }
-.image>img{
+.image > img {
   width: 400px;
   height: 500px;
   object-fit: cover;
 }
-.font{
+.font {
   text-align: center;
   position: relative;
-  font-size:25em;
+  display: flex;
+  justify-content: center;
+  font-size: 70vw;
+  height: calc(100vh - 100px);
   overflow: hidden;
+  width: calc(100vw - 48px);
   font-weight: 900;
-  color: #f4f4f41c;
+  color: #f4f4f40a;
 }
-.inside{
+.inside {
+  width: 100vw;
+  text-align: center;
   display: flex;
   align-items: center;
-  width: 120vw;
-  position: relative;
-  overflow: hidden;
-  left: -200px;
-  height: calc(80vh - 0);
-
+  justify-content: center;
 }
-.presentation-text{
-  width:calc(100vw - 24px);
-  height:calc(100vh - 150px) ;
+.presentation-text {
+  width: calc(100% - 48px);
+
+  height: calc(100vh - 200px);
 
   font-size: 0.6em;
   font-weight: 300;
-  
+
   position: absolute;
-justify-content: center;
-display: flex;
-align-items: center;;
-
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
-.inside-presentation-text{
+.inside-presentation-text > p {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 50px 0 0 0;
+}
+.inside-presentation-text {
+  height: calc(100vh - 150px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
+  text-align: center;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  bottom: -24px;
+  position: absolute;
+  right: 10px;
+}
+.drawer-list {
+  height: 80vh;
+  color: #f4f4f4d1;
+}
+.drawer {
+  color: #f4f4f4d1;
+}
+.MuiTypography-root {
+  font-size: 1.5em !important;
+  text-align: end !important;
+}
+.css-9emuhu-MuiPaper-root-MuiDrawer-paper {
+  background-color: rgba(33, 2, 51, 0.841) !important;
+  
+}
+.menu-icon:hover,
+.instagram-icon:hover,
+.gitHub-icon:hover,
+.linkedIn-icon:hover,.MuiTypography-root:hover {
+  color: #ff9500e9;
+}
+.my-name {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+@media screen and (min-width: 768px) {
+ .inside-presentation-text > p {
+  font-size: 5rem;
+  font-weight: 800;
+  margin: 50px 0 0 0;
+}
 }

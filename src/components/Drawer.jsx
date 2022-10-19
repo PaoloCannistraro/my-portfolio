@@ -9,7 +9,6 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
-import Button from '@mui/material/Button';
 
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
@@ -38,9 +37,9 @@ export default function TemporaryDrawer() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <List className="drawer-list">
         {["About", "Contact", "Prova"].map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem className="text-list" key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon></ListItemIcon>
               <ListItemText primary={text} />
@@ -56,9 +55,15 @@ export default function TemporaryDrawer() {
     <div>
       {["bottom"].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Toolbar style={{ justifyContent: "space-between", alignItems:'center', paddingTop:'20px' }}>
+          <Toolbar
+            style={{
+              justifyContent: "space-between",
+              alignItems: "center",
+              paddingTop: "20px",
+            }}
+          >
             <div className="title">
-              <h1>P.C </h1>
+              <h1>PC</h1>
               <FontAwesomeIcon
                 style={{
                   fontSize: "2rem",
@@ -74,9 +79,13 @@ export default function TemporaryDrawer() {
               edge="start"
               color="inherit"
               aria-label="menu"
+              anchor={anchor}
+              open={state[anchor]}
               sx={{ mr: 0 }}
             >
               <MenuIcon
+              className="menu-icon"
+                onClick={toggleDrawer(anchor, true)}
                 style={{ fontSize: "2em" }}
                 anchor={anchor}
                 open={state[anchor]}
@@ -86,6 +95,7 @@ export default function TemporaryDrawer() {
           </Toolbar>
 
           <Drawer
+            className="drawer"
             anchor={anchor}
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
