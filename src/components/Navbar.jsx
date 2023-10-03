@@ -5,7 +5,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Link from "@mui/material/Link";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { faCoffee, faHouse, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode } from "@fortawesome/free-solid-svg-icons";
 import List from "@mui/material/List";
 import Drawer from "@mui/material/Drawer";
 import Toolbar from "@mui/material/Toolbar";

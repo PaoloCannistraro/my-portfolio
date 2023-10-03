@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
-import CenterPage from "./CenterPage";
 
 function Presentation() {
   const x = useMotionValue(3000);
