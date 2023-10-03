@@ -1,21 +1,14 @@
 import React from "react";
-import IconButton from "@mui/material/IconButton";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import LinkMaterial from "@mui/material/Link";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee, faHouse, faCode } from "@fortawesome/free-solid-svg-icons";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import TemporaryDrawer from "@mui/material/Drawer";
-import Navbar from "./Navbar"
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Navbar from "./Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutMe from "./Pages/AboutMe";
 import CenterPage from "./CenterPage";
 import Skills from "./Pages/Skills";
-
-
+import Presentation from "./Presentation";
+import Projects from "./Projects";
 
 function LandingPage() {
   return (
@@ -30,18 +23,17 @@ function LandingPage() {
           }}
         >
           <Navbar />
-          <TemporaryDrawer/>
+          <TemporaryDrawer />
           <Router>
             <Routes>
-              <Route path="Home." element={<CenterPage />} />
-              <Route path="/About." element={<AboutMe />} />
-              <Route path="/Skills." element={<Skills/>} />
+              {/* <Route path="Home." element={<CenterPage />} /> */}
+              <Route path="/About" element={<AboutMe />} />
+              <Route path="/Skills" element={<Skills />} />
+              <Route path="/Home" element={<CenterPage />} />
+              <Route path="/Projects" element={<Projects />} />
             </Routes>
           </Router>
-
-          <div className="font">
-            <div className="inside">Ciao</div>
-          </div>
+          <Presentation />
         </Box>
       </Container>
     </div>

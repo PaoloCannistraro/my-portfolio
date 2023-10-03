@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function AboutMe() {
-  return (
-    <div style={{position:'absolute'}}>AboutMe</div>
-  )
+  return <div style={{ position: "absolute" }}>AboutMe</div>;
 }
 
-export default AboutMe
+export default AboutMe;

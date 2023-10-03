@@ -40,7 +40,7 @@ export default function TemporaryDrawer() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className="drawer-list">
-        {["Home.", "About.", "Skills."].map((text, index) => (
+        {["Home", "About", "Skills", "Projects"].map((text, index) => (
           <a key={index} href={text}>
             <ListItem className="text-list" key={text} disablePadding>
               <ListItemButton>
@@ -66,17 +66,20 @@ export default function TemporaryDrawer() {
               paddingTop: "20px",
             }}
           >
-            <div className="title">
-              <h1>PC</h1>
-              <FontAwesomeIcon
-                style={{
-                  fontSize: "2rem",
-                  marginLeft: "15px",
-                  filter: "drop-shadow(1px 2px 5px black)",
-                }}
-                icon={faCode}
-              />
-            </div>
+            {" "}
+            <a href="/Home">
+              <div className="title">
+                <h1>PC</h1>
+                <FontAwesomeIcon
+                  style={{
+                    fontSize: "2rem",
+                    marginLeft: "15px",
+                    filter: "drop-shadow(1px 2px 5px black)",
+                  }}
+                  icon={faCode}
+                />
+              </div>
+            </a>
             <IconButton
               size="large"
               edge="start"
@@ -90,6 +93,7 @@ export default function TemporaryDrawer() {
           </Toolbar>
 
           <Drawer
+            style={{ margin: "24px" }}
             className="drawer"
             anchor={anchor}
             open={state[anchor]}
@@ -162,7 +166,7 @@ export default function TemporaryDrawer() {
                     </div>
                     <p>cannistraro91@gmail.com</p>
                     <p>+393209308277</p>
-                    <p>Bologna, Emilia-Romagna</p>
+                    <p>Palermo, Sicilia</p>
                   </div>
                 </Box>
               </div>
